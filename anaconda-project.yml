@@ -1,0 +1,31 @@
+name: Multienvs Project
+
+description: A template project to demonstrate multiple envs, with Julia, Python2 and Python3, doc limitations, workarounds and git operations with AE5
+
+
+platforms:
+  - linux-64
+
+env_specs:
+  py36:
+    packages:
+    - python=3.6.3
+    - notebook
+    channels: []
+  
+  py27: 
+    packages:
+    - python=2.7
+    - numpy
+    - notebook
+    channels: []
+    
+  Julia:
+    packages:
+    - julia
+    - jupyter_client
+    channels:
+    - https://conda.anaconda.org/conda-forge
+    
+
+
