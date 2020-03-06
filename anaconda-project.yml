@@ -53,5 +53,5 @@ env_specs:
     channels:
     - https://conda.anaconda.org/conda-forge
     
-
+  anaconda201908_py37: {}
 
