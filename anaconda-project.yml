@@ -26,6 +26,32 @@ env_specs:
     - jupyter_client
     channels:
     - https://conda.anaconda.org/conda-forge
+
+  py37:
+    packages: 
+    - python=3.7 
+    - pip 
+    - notebook 
+    - numpy 
+    - scikit-image 
+    - scipy 
+    - pandas 
+    - requests 
+    - ipywidgets 
+    - bqplot 
+    - ipyvolume 
+    - ipyleaflet 
+    - pythreejs 
+    - ipyevents 
+    - ipysheet 
+    - ipytree 
+    - ipympl 
+    - pywwt 
+    - voila=0.1 
+    - jupyterlab 
+    - nodejs=11.14
+    channels:
+    - https://conda.anaconda.org/conda-forge
     
 
 
