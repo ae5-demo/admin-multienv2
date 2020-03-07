@@ -11,11 +11,11 @@ commands:
     unix: bash sample_proxy/server.sh
     env_spec: py36
   distribution:
-    unix: panel serve distribution_tabs.ipynb
+    notebook: "Working With Multiple Envs.ipynb"
     supports_http_options: true
     env_spec: anaconda201908_py37
   panel_example:
-    unix: panel serve gapminders.ipynb
+    unix: panel serve distribution_tabs.ipynb
     env_spec: anaconda201908_py37
     
 env_specs:
