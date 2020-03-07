@@ -6,15 +6,25 @@ description: A template project to demonstrate multiple envs, with Julia, Python
 platforms:
   - linux-64
 
+commands: 
+  server:
+    unix: bash sample_proxy/server.sh
+    env_spec: py36
+  distribution:
+    unix: panel serve distribution_tabs.ipynb
+    supports_http_options: true
+    env_spec: anaconda201908_py37
+  panel_example:
+    unix: panel serve gapminders.ipynb
+    env_spec: anaconda201908_py37
+    
 env_specs:
   py36:
     packages:
     - python=3.6.3
     - notebook
     channels: []
-    commands: 
-      server:
-        unix: bash sample_proxy/server.sh
+
   
   py27: 
     packages:
@@ -56,12 +66,5 @@ env_specs:
     channels:
     - https://conda.anaconda.org/conda-forge
     
-  anaconda201908_py37:
-   packages: []
-   channels: []
-   commands: 
-     distribution:
-       unix: panel serve distribution_tabs.ipynb
-       unix: panel serve gapminders.ipynb
-       supports_http_options: true
-
+  anaconda201908_py37: {}
+  
