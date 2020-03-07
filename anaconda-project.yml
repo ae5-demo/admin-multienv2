@@ -12,6 +12,9 @@ env_specs:
     - python=3.6.3
     - notebook
     channels: []
+    commands: 
+      server:
+        unix: bash sample_proxy/server.sh
   
   py27: 
     packages:
@@ -53,5 +56,12 @@ env_specs:
     channels:
     - https://conda.anaconda.org/conda-forge
     
-  anaconda201908_py37: {}
+  anaconda201908_py37:
+   packages: []
+   channels: []
+   commands: 
+     distribution:
+       unix: panel serve distribution_tabs.ipynb
+       unix: panel serve gapminders.ipynb
+       supports_http_options: true
 
