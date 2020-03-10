@@ -61,3 +61,8 @@ foreach_env() {
 list_specname_for_env() {
   foreach_env get_kernelspec_file_for_env | xargs grep -Po '"display_name": \K(.*)' /opt/continuum/anaconda/envs/Julia/share/jupyter/kernels/julia-1.1/kernel.json | awk -F/ '{print $6,$11}' | sed 's/kernel.json://g' | sed s/,//
 }
+
+rename_kernels_to_envs() {
+ foreach_env rename_kernelspec
+}
+
