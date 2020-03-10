@@ -2,10 +2,12 @@
 setup() {
   conda update anaconda-project -y && anaconda-project prepare --all
   source ~/.bashrc
+}
+install_julia_kernel() {
   conda activate Julia
-
   # install ijulia kernel - requires internet access..
   julia scripts/ijulia.jl
+  jupyter kernelspec install ~/.local/share/jupyter/kernels/julia-1.1 --name "Julia" --prefix $CONDA_PREFIX
 }
 
 echoerr() { 

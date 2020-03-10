@@ -13,10 +13,12 @@ commands:
   distribution:
     notebook: "Working With Multiple Envs.ipynb"
     supports_http_options: true
-    env_spec: anaconda201908_py37
+    env_spec: py37
   panel_example:
     unix: panel serve distribution_tabs.ipynb
     env_spec: anaconda201908_py37
+  py27:
+    notebook: Python2.ipynb
     
 env_specs:
   py36:
