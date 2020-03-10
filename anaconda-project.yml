@@ -7,22 +7,45 @@ platforms:
   - linux-64
 
 commands: 
-  server:
-    unix: bash sample_proxy/server.sh
-    env_spec: py36
-  distribution:
+  Multiple-env-nb:
     notebook: "Working With Multiple Envs.ipynb"
     supports_http_options: true
     env_spec: py37
+
   panel:
     unix: panel serve distribution_tabs.ipynb --port 8086
     env_spec: anaconda201908_py37
-  py27:
+  
+  py27-nb:
     notebook: Python2.ipynb
-  julia:
+    env_spec: py27
+  
+  julia-nb:
     notebook: Julia.ipynb
-  py37:
+    env_spec: Julia
+  
+  py37-nb:
     notebook: Python2.ipynb
+    
+  server-py36:
+    unix: bash sample_proxy/server.sh
+    env_spec: py36
+
+  server-py27:
+    unix: bash sample_proxy/server.sh
+    env_spec: py27
+  
+  server-py37:
+    unix: bash sample_proxy/server.sh
+    env_spec: py37
+    
+  server-anaconda201908_py37:
+    unix: bash sample_proxy/server.sh
+    env_spec: anaconda201908_py37
+    
+  server-Julia:
+    unix: bash sample_proxy/server.sh
+    env_spec: Julia
     
 env_specs:
   py36:
