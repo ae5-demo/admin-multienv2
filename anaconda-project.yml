@@ -13,7 +13,7 @@ commands:
     env_spec: py37
 
   panel:
-    unix: panel serve distribution_tabs.ipynb --port 8086
+    unix: panel serve distribution_tabs.ipynb --port 8086 --allow-websocket-origin=*.ae54en.demo.anaconda.com
     env_spec: anaconda201908_py37
   
   py27-nb:
